@@ -1,0 +1,8 @@
+/* Reset básico */
+* { box-sizing: border-box; }
+html, body, h1, h2, p, ul, li, figure, figcaption, nav, header {
+    margin: 0;
+    padding: 0;
+}
+ul { list-style: none; }
+img { max-width: 100%; }

@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+/* =========================
+   TEMA BELA E A FERA
+   Biblioteca da Fera
+========================= */
+
+body {
+    color: #f5e6c8;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.6;
+
+    margin: 0 auto;
+    width: 940px;
+
+    background:
+    linear-gradient(
+        rgba(20,15,10,0.92),
+        rgba(20,15,10,0.96)
+    ),
+    url(../img/fundo-biblioteca.jpg);
+
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+ 
+/* LOGO */
+.logo{
+    width: 280px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255,215,120,0.6));
+    margin: 0;
+
+    display: block;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-family: 'Cinzel', serif;
+
+    background-image: url(../img/sobre-background.jpg);
+    background-size: cover;
+    background-position: center;
+
+    color: #ffd36b;
+
+    padding: 25px;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 56px;
+    letter-spacing: 3px;
+
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* SUBTÍTULOS */
+h2 {
+    font-family: 'Cinzel', serif;
+
+    color: #ffd36b;
+
+    border-bottom: 2px solid #b8860b;
+
+    margin-top: 50px;
+    padding-bottom: 10px;
+
+    font-size: 36px;
+
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* PARÁGRAFOS */
+p {
+    padding: 0 45px;
+    text-indent: 20px;
+
+    text-align: justify;
+
+    color: #f5e6c8;
+}
+
+/* LINKS */
+a {
+    color: #ffd36b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #fff3c2;
+    text-shadow: 0 0 8px #ffd36b;
+}
+
+/* FIGURAS */
+figure {
+    background-color: rgba(40,25,15,0.92);
+
+    border: 2px solid #b8860b;
+
+    text-align: center;
+
+    padding: 15px;
+    margin: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+/* IMAGENS */
+figure img {
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* LEGENDA */
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+
+    color: #f0d9a1;
+}
+
+/* CENTRO DISTRIBUIÇÃO */
+#centro-distribuicao {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 550px;
+}
+
+/* FOTO FAMÍLIA */
+#familia-pelho {
+    float: right;
+    margin: 0 0 10px 20px;
+
+    width: 320px;
+}
+
+/* RODAPÉ */
+#rodape {
+    color: #d8c08a;
+
+    margin: 50px 0;
+    padding: 30px 0;
+
+    border-top: 2px solid rgba(255,211,107,0.4);
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+#rodape img {
+    margin-right: 20px;
+    vertical-align: middle;
+
+    width: 280px;
+
+    filter: drop-shadow(0 0 10px rgba(255,215,120,0.6));
+}
+
+/* EFEITO SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESPONSIVO */
+@media (max-width: 980px) {
+
+    body {
+        width: 90%;
+        font-size: 22px;
+    }
+
+    #centro-distribuicao,
+    #familia-pelho {
+        width: 100%;
+        float: none;
+        margin: 20px 0;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+}
+
+/* ===================================================
+   AJUSTES DO EXERCÍCIO 3.10 - RESET E DISPLAY (LISTA)
+   =================================================== */
+
+ul {
+    margin: 30px 45px;
+}
+
+ul li {
+    font-size: 22px;
+    color: #f5e6c8;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(184, 134, 11, 0.3);
+}
+
+/* ===================================================
+   AJUSTES DO EXERCÍCIO 3.12 - POSICIONAMENTO
+   =================================================== */
+
+/* Header em linha: logo, menu, busca e sacola lado a lado */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px 30px;
+    padding: 10px 0;
+}
+
+.menu-opcoes {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Itens do menu lado a lado, com quebra de linha se não couberem */
+.menu-opcoes ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+/* Barra de busca ao lado do menu */
+.busca {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.busca img {
+    width: 18px;
+    height: 18px;
+}
+
+.busca input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #b8860b;
+    color: #f5e6c8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    padding: 4px;
+    outline: none;
+}
+
+/* Sacola empurrada para a extrema direita */
+.sacola {
+    margin-left: auto;
+    font-size: 20px;
+    color: #ffd36b;
+}
